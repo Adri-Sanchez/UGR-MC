@@ -2,8 +2,8 @@ CXX = g++ -O2 -w -std=c++11
 
 all:	terremotos
 
-lex.yy.c:	mylex
-	@flex mylex
+lex.yy.c:	mylex.l
+	@flex mylex.l
 
 terremotos:	lex.yy.c
 	@$(CXX) $^ -o $@ -lfl
