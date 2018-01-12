@@ -2,7 +2,7 @@
 ##### Modelos de Computación - Dpto. de Ciencias de la Computación e Inteligencia Artificial
 ###### Escuela Técnica Superior de Ingeniería Informática y Telecomunicaciones (Universidad de Granada)
 
-* Leer en otro idioma: [English](README.eng.md)
+*Leer en otro idioma: [English](README.eng.md)*
 
 Proyecto usando Flex (Fast Lexical Analyzer Generator) y C++ para, desde un terminal linux, poder visualizar los datos ofrecidos por el <a href="http://www.ign.es/web/ign/portal">Instituto Geográfico Nacional</a> acerca de los terremotos producidos en los últimos días en la península ibérica y alrededores, utilizando también dichos datos para realizar diversos cálculos. 
 
