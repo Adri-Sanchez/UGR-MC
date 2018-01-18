@@ -8,7 +8,7 @@ Proyecto usando Flex (Fast Lexical Analyzer Generator) y C++ para, desde un term
 
 ## Construido con
 
-* [FLEX](http://www.dropwizard.io/1.0.2/docs/) - The Fast Lexical Analyzer Generator
+* [FLEX](https://github.com/westes/flex) - The Fast Lexical Analyzer Generator
 
 ## Autor
 
