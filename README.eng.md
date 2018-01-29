@@ -4,7 +4,7 @@
 
 *Read in another language: [Spanish](README.md)*
  
-Proyect using Flex (Fast Lexical Analyzer Generator) and C++ for visualizing from a Linux terminal the data offered by the Spanish's <a href="http://www.ign.es/web/ign/portal">National Geographic Institute</a> about the earthquakes produced in Spain and the surrouding area while also using the data for realizing some basic computing/calculations.
+Proyect using Flex (Fast Lexical Analyzer Generator) and C++ for visualizing from a Linux terminal the data offered by the Spanish's <a href="http://www.ign.es/web/ign/portal">National Geographic Institute</a> about the earthquakes produced in Spain and the surrouding area while also using the data for making some basic computing/calculations.
 ## Built with
 
 * [FLEX](https://github.com/westes/flex) - The Fast Lexical Analyzer Generator
