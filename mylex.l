@@ -14,6 +14,7 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <limits>
 
 using namespace std;
 
@@ -29,7 +30,7 @@ string cadena;
 
 void eliminar_tag (string &str);
 void print_menu();
-double distanciaCoordenadas(double LAT1, double LONG1, double LAT2, double LONG2);
+double distanciaCoordenadas(const double &LAT1, const double &LONG1, const double &LAT2, const double &LONG2);
 
 
 %}
@@ -198,7 +199,7 @@ do{
 			break;
 
 		case '3':{
-			double distancia = 99999;
+			double distancia = std::numeric_limits<double>::max();
 			double cercana;
 			int indice;
 
@@ -211,8 +212,11 @@ do{
 				}
 			}
 
-			cout << "\nEl terremoto más cercano a " << localizacion << " fue el producido en " << Zona[indice] << "\nDía: " << Fecha[indice] << "\nDistancia aproximada: " << distancia << " Km." << endl; 
-
+			cout << "El terremoto más cercano a " << localizacion << " fue el producido en " << Zona[indice] 
+	    		 << "\nDía: " << Fecha[indice] 
+		         << "\nDistancia aproximada: " << distancia << " Km." 
+                 <<	"\nMagnitud: " << Magnitud[indice] 
+				 << endl; 
 		}
 			break;
 		
@@ -222,13 +226,18 @@ do{
 
 			cout  << "\n> La media de las magnitudes de los últimos terremotos es de " << media << " mbLg" << endl;
 
-			cout << "\n> El terremoto más intenso ha sido el producido en " << Zona[index] << " el día " << Fecha[index] << "\nIntensidad máxima: " << Magnitud[index] << " mbLg" << endl;
+			cout << "\n> El terremoto más intenso ha sido el producido en " << Zona[index] 
+				 << " el día " << Fecha[index]          
+                 << "\nIntensidad máxima: " << Magnitud[index] << " mbLg" 
+                 << endl;
 
 			break;
 		
 		case '5': 
 			
-			cout << "La localización definida actualmente es " << localizacion << "\nCoordenadas [LAT,LONG] = [" << latitud << "," << longitud << "]" << endl;
+			cout << "La localización definida actualmente es " << localizacion 
+                 << "\nCoordenadas [LAT,LONG] = [" << latitud << "," << longitud << "]" 
+                 << endl;
 
 			break;
 
@@ -246,7 +255,9 @@ do{
 			cout << "Localización modificada con éxito." << endl;
 			break;
 		
-		default: break;
+		default: 
+			system("reset");
+			break;
 	}
 
 	
@@ -255,6 +266,7 @@ do{
 
 return 0;
 }
+
 
 void eliminar_tag (string &str){
 	std::size_t first, last;
@@ -288,9 +300,9 @@ void print_menu(){
 	cout << "\n-> ";
 }
 
-double distanciaCoordenadas(double LAT1, double LONG1, double LAT2, double LONG2){
-	double Pi = 3.141592653;
-	double Radio = 6371.0;
+double distanciaCoordenadas(const double &LAT1, const double &LONG1, const double &LAT2, const double &LONG2){
+	const double Pi    = 3.141592653;
+	const double Radio = 6371.0;
 
 	double LA1 = LAT1  * Pi / 180.0;
 	double LN1 = LONG1 * Pi / 180.0;
