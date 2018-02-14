@@ -1,12 +1,12 @@
 CXX = g++ -O2 -w -std=c++11
 
-all:	terremotos
+all:	IGNViewer
 
 lex.yy.c:	mylex.l
 	@flex mylex.l
 
-terremotos:	lex.yy.c
+IGNViewer:	lex.yy.c
 	@$(CXX) $^ -o $@ -lfl
 
 clean:
-	@rm -f terremotos lex.yy.c IGN.html
+	@rm -f IGNViewer lex.yy.c IGN.html
